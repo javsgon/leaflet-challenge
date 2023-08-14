@@ -39,7 +39,7 @@ function getColor(depth) {
       return colors[i];
     }
   }
-  return colors[colors.length - 1]; // Default color if depth is beyond ranges
+  return colors[colors.length - 1]; // Default color in case the depth is beyond ranges
 }
 
 // Getting our GeoJSON data
