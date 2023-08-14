@@ -10,14 +10,14 @@ let map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
 
-// Use this link to get the GeoJSON data.
+// Link to get the GeoJSON data.
 let earthquakeUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson";
 
 // Create markers using Leaflet and add them to the map
 function createMarkers(earthquakes) {
   earthquakes.forEach(earthquake => {
     const marker = L.circleMarker([earthquake.coordinates[1], earthquake.coordinates[0]], {
-      radius: earthquake.mag * 3, // Adjust size based on magnitude
+      radius: earthquake.mag * 3, // Adjusting size based on magnitude
       fillColor: getColor(earthquake.depth),
       color: '#000',
       weight: 1,
@@ -32,7 +32,7 @@ function createMarkers(earthquakes) {
 // Define a color scale based on depth
 function getColor(depth) {
   const colors = ['#b2df8a', '#66ff00', '#ffff00', '#ffcc00', '#ff9900', '#ff0000'];
-  const depthRanges = [10, 30, 50, 70, 90]; // Adjust ranges as needed
+  const depthRanges = [10, 30, 50, 70, 90];
 
   for (let i = 0; i < depthRanges.length; i++) {
     if (depth < depthRanges[i]) {
@@ -54,7 +54,7 @@ d3.json(earthquakeUrl)
         place: feature.properties.place,
         time: new Date(feature.properties.time),
         coordinates: feature.geometry.coordinates,
-        depth: feature.geometry.coordinates[2] // Depth is the third coordinate
+        depth: feature.geometry.coordinates[2] // As mentioned the Depth is the third coordinate
       };
     });
 
