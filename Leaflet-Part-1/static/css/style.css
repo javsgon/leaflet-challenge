@@ -11,14 +11,14 @@ html {
 
 /* Legend Style */
 .legend {
-  background-color: rgba(255, 255, 255, 0.8); /* White with opacity */
+  background-color: rgba(255, 255, 255, 0.8); /* White with the opacity */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for legend items */
+/* Style for the legend items */
 .legend i {
   width: 18px;
   height: 18px;

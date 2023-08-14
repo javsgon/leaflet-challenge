@@ -2,7 +2,7 @@
 let myMap = L.map('map', {
   center: [36.1183333, -117.8776667],
   zoom: 3,
-  minZoom: 3, // Set the zoom level to 2
+  minZoom: 3, // Set the zoom level to 3
 });
 
 // Adding the tile layer
@@ -17,7 +17,7 @@ let earthquakeUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/a
 function createMarkers(earthquakes) {
   earthquakes.forEach(earthquake => {
     const marker = L.circleMarker([earthquake.coordinates[1], earthquake.coordinates[0]], {
-      radius: earthquake.mag * 3, // Adjusting size based on magnitude
+      radius: earthquake.mag * 3, // Adjusting the size based on magnitude
       fillColor: getColor(earthquake.depth),
       color: '#000',
       weight: 1,
@@ -29,7 +29,7 @@ function createMarkers(earthquakes) {
   });
 }
 
-// Define a color scale based on depth
+// Define a color scale based on the value of depth
 function getColor(depth) {
   const colors = ['#b2df8a', '#66ff00', '#ffff00', '#ffcc00', '#ff9900', '#ff0000'];
   const depthRanges = [10, 30, 50, 70, 90];
@@ -39,7 +39,7 @@ function getColor(depth) {
       return colors[i];
     }
   }
-  return colors[colors.length - 1]; // Default color in case the depth is beyond ranges
+  return colors[colors.length - 1]; // Default color in case the depth is beyond the ranges
 }
 
 // Getting our GeoJSON data

@@ -10,23 +10,21 @@ The instructions for this activity are broken into two parts:
 
 Part 1: Create the Earthquake Visualization
 
-  1. Get your dataset. To do so, follow these steps:
+  1. Get the dataset. To do so, the below steps were followed:
 
-The USGS provides earthquake data in a number of different formats, updated every 5 minutes. Visit the USGS GeoJSON FeedLinks (https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php). page and choose a dataset to visualize. 
+The USGS provides earthquake data in a number of different formats, updated every 5 minutes. The USGS GeoJSON FeedLinks page was visited (https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php). and a dataset was chosen to visualize it. 
 
-When you click a dataset (such as "All Earthquakes from the Past 7 Days"), you will be given a JSON representation of that data. Use the URL of this JSON to pull in the data for the visualization.
+Note: When clicking a dataset (such as "All Earthquakes from the Past 7 Days"), we are given a JSON representation of that data. The URL of this JSON was used to pull in the data for the visualization.
 ![Screenshot 2023-08-13 at 9 02 46 PM](https://github.com/javsgon/leaflet-challenge/assets/125521896/d561bc2b-545a-4f86-b218-3a43a40d1e5e)
 
   2. Import and visualize the data by doing the following:
 
-Using Leaflet, create a map that plots all the earthquakes from your dataset based on their longitude and latitude.
+Using Leaflet, a map was createed that plots all the earthquakes from the dataset based on their longitude and latitude.
 
-Your data markers should reflect the magnitude of the earthquake by their size and the depth of the earthquake by color. Earthquakes with higher magnitudes should appear larger, and earthquakes with greater depth should appear darker in color.
+The data markers reflect the magnitude of the earthquake by their size and the depth of the earthquake by color. Earthquakes with higher magnitudes appear larger, and earthquakes with greater depth appear darker in color.
 
-Hint: The depth of the earth can be found as the third coordinate for each earthquake.
+Popups are included that provide additional information about the earthquake when its associated marker is clicked.
 
-Include popups that provide additional information about the earthquake when its associated marker is clicked.
-
-Create a legend that will provide context for your map data.
+A legend was created that provide context for the map data.
 
 ![Screenshot 2023-08-13 at 9 02 26 PM](https://github.com/javsgon/leaflet-challenge/assets/125521896/25e43856-abfb-4260-9043-37cd13bbbc96)
